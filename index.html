@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Britney's Website</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica', sans-serif;
+    }
+    
+    header {
+       background: linear-gradient(to right, rgba(0, 600, 204, 0.9), rgba(6, 141, 96, 0.55));
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    header::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0px;
+        background-image: linear-gradient(to right, rgba(0, 102, 204, 0.8), rgba(0, 51, 153, 0.8));
+        z-index: -1;
+    }
+    h1 {
+        margin: 0;
+        color: white;
+        font-size: 36px; /* Adjust font size as needed */
+    }
+    nav ul {
+        list-style: none;
+        margin-top: 20px;
+        margin-inline: 30px;
+        background-color: #3333337a; /* Background color for the tabs */
+        padding: 10px; /* Adjust padding as needed */
+        border-radius: 5px; /* Optional: Add rounded corners to the tabs */
+    }
+   nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent; /* Add a transparent border initially */
+        padding: 8px 15px; /* Adjust padding as needed */
+        border-radius: 5px; /* Optional: Add rounded corners to the tabs */
+        transition: border-color 0.3s ease; /* Smooth transition for the border color */
+    }
+    nav ul li a:hover {
+        border-color: #b7f5b0; /* Change this color on hover */
+    }
+    .tab-content {
+        display: none;
+        padding: 10px;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .project-tabs {
+        margin-bottom: 5px;
+    }
+    .project-tabs button {
+        background-color: #415f3a;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .project-tabs button:hover {
+        background-color: #33ff00a5;
+    }
+    section {
+        padding: 20px 30px;
+    }
+    footer {
+        background-color: #7da678c4;
+        padding: 10px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+    
+<body>
+
+    <header>
+        <h1>Britney's Website </h1>
+        <nav>
+            <ul>
+                <li><a href="#General">About this Website</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="General">
+        <h2>About this Website</h2>
+        <p> Hey! <p>
+        <p>
+            Winter break finallly came and I decided I'd use this time to pick up new skills and create things I typically wouldn't find myself doing. 
+            I've had the idea of coding my own website for a while now but have pushed it aside for too long. I really wanted a platform where I could showcase 
+            my projects in a more personalized manner and I figured this would be the best way to do that. I had fun learning a thing or two in the process. Enjoy!
+        <p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="file:///Users/britneyr./Desktop/Photo%20on%2012-23-23%20at%206.06%E2%80%AFPM%20%233.jpg" alt="About Me Image" style="width: 100%; max-width: 500px; height: auto;">
+        <p> I'm a third Year student studying Mechanical Engineering at UCSD. </p>
+        <p> I started my college career with an interest in Biology, which grew into Bioengineering, which grew into Mechanical Engineering. 
+            I knew Engineering was the path for me after completing my first two undergraduate physics classes. Although these were the hardest 
+            classes I had taken up to this point, I found the challenge incredibly rewarding. Not suprisingly I've always been interested in 
+            solving puzzles and enjoy setting challenges for myself. Gaining technical experience from my extracurricular activites was 
+            very important to me from the get go and has allowed me to hone in on my professional pursuits. 
+        <p>
+        <p> Outside of school I really enjoy doing outdoor activites. 
+            I'm very grateful to have spent this past Summer in Seattle, Washington, as an intern. I spent most of my weekends hiking any 
+            cool trail I could find, prefferably ones with a waterfall or lake I could dip into. I even had the opportunity to backpack for the first time 
+            when I was there! It was difficult and tiring, but I found the challenge and seclusion very fulfilling. I usually save my hikes when I have more time 
+            on my hands, when I'm not doing that you can either find me rock-climbing or running. Distance-running has been a healthy de-stressing hobby 
+            I've continued since high-school. I completed my first half-marathon in May last year and I definetely look forward to doing
+            more in the future! Rock climbing is also another hobby I juggle and although I am not the best climber, I find the 
+            sport to be so much fun.  
+        <p>
+    </section>
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- Project Tabs -->
+        <div class="project-tabs">
+            <button onclick="openTab('project1')">RPL</button>
+            <button onclick="openTab('project2')">Stanley 1913</button>
+            <button onclick="openTab('project3')">Skywalker Legacy</button>
+            <button onclick="openTab('project4')">Aquamesh</button>
+            <!-- Add more buttons for additional projects -->
+        </div>
+
+        <!-- Project Content -->
+        <div id="project1" class="tab-content active">
+            <h3> <a href="https://www.rocketproplab.org/ " target="_blank"> ROCKET PROPULSION LABORATORY</a> </h3>
+            <p> I joined Rocket Propulsion in October 2022 as part of their New Member Project (NMP).
+                Engaging in NMP offered a hands-on initiation into rocket design, fostering collaboration and 
+                practical engineering skills. Guided by experienced mentors, I gained proficiency in CAD development and simulation 
+                setup using tools like OpenRocket and SOLIDWORKS. The program's inclusive atmosphere encouraged creativity, 
+                leading to the exciting launch of G-class model rockets at the Friends of Amateur Rocketry in Kern County, CA, 
+                solidifying my foundational knowledge and passion for rocketry. 
+            <p>
+            <img src="file:///Users/britneyr./Downloads/NMPTeam.jpg" style="width: 100%; max-width: 500px; height: auto;">
+            <p> More excitingly, after NMP I joined the Osiris Structures team. Osiris is RPL's new and first multi-stage rocket, meant to compete in the 2025 Spaceport
+                America Cup, an intercollegiate rocket engineering competition. As part of the strucutres team I've conducted 
+                quantitative analysis of materials and geometric designs for Osiris's external structure with simulations. At our current pace we hope to finalize our design by the 
+                end of this year and with some in-house fiberglass layups. As the safety office of my team, I maintain a comprehensive understanding of our design's manufacturing methods
+                and am knowledgable about safety protocols.
+            <p>
+                
+                <img src="file:///Users/britneyr./Downloads/osirislogo-removebg-preview.png" style="width: 100%; max-width: 300px; height: auto;">
+        </div>
+
+        <div id="project2" class="tab-content">
+                <h3> <a href="https://www.stanley1913.com/" target="_blank">STANLEY 1913</a> <h3>
+                <!-- Main product image on the left, additional images and text on the right -->
+                <div class="project-details">
+                    <img src="https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-Classic-Legendary-Bottle-1-5qt-Hammertone-Green_0f44699f-37db-4bae-a6d2-b9936616719e.png?v=1704307510&width=1080" alt="Stanley 1913 Product Image" style="width: 100%; max-width: 300px; height: auto;">
+                    <div class="project-description">
+                        <p>Summer 2023 I was fortunate enough to be part of Stanley 1913's first intern cohort as a Design Engineer. 
+                            This internship surpassed my expectations, offering a remarkably hands-on experience right from the start. 
+                             It provided me with a thorough understanding of all facets of product engineering, including mechanism design, 
+                             material selection, manufacturing methods, assembly, and performance validation. Utilizing SolidWorks, I created detailed 3D printed prototypes, 
+                              optimizing design iterations based on material selection and manufacturing considerations. 
+                             Additionally, I conducted research on metal forming techniques, contributing insights published in Stanley's internal 
+                            documentation to improve manufacturing efficiency.
+                        <p>
+                        <p> Based on my other projects it may be confusing to interpret how Stanley 1913 fits into my career path. 
+                            My internship as a Design Engineer was driven by a desire for diverse industry experience and the 
+                            challenge of immersing myself in a new setting. Despite being a consumer goods company, the engineering skills I acquired 
+                            during this internship are versatile and applicable to any industry. This experience not only enriched my technical abilities but 
+                            also honed my interpersonal skills. I thoroughly enjoyed my time in Seattle and working alongside such a dedicated and passionate team.   
+                        <p>
+                    </div>
+                </div>
+                <!-- Additional images in a row -->
+                <div class="project-images">
+                    <img src="file:///Users/britneyr./Downloads/IMG_3290.jpg" alt="Additional Image 1" style="width: 48%; max-width: 400px; height: auto; display: inline-block; margin-right: 2%;">
+                    <img src="file:///Users/britneyr./Downloads/IMG_3291.jpg" alt="Additional Image 2" style="width: 48%; max-width: 400px; height: auto; display: inline-block;">
+                </div>
+            </div>
+
+        <!-- Add more tab-content divs for additional projects -->
+
+        <div id="projectDetailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeProjectDetailsModal()">&times;</span>
+                <h2 id="projectTitle"></h2>
+                <p id="projectDescription"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Software:</h3>
+        <p> Excel, OpenRocket, SOLIDWORKS, Python, MATLAB, Fusion 360, AutoCAD, Microsoft Powerpoint, Microsoft Teams, Outlook, Microsoft Word, Blender</p>
+        <h3>Technical:</h3>
+        <p>Soldering, 3D Printing (SLA & FDM), Lathe Machining, Laser Cutting, Power Tools </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me </h2>
+        <h3>Email:</h3>
+        <p>britneyrosas03@gmail.com<p>
+        <h3>LinkedIn:</h3>
+        <p><a href="https://www.linkedin.com/in/britney-rosas/" target="_blank">linkedin.com/in/britney-rosas/</a><p>
+        <!-- Add more contact information as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 BritneyAileenRosas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tab content
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            var selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+
