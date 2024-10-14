@@ -1,102 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Britney's Website</title>
-        <link rel="stylesheet" href="style.css">
+    <title>Britney's Website</title>
+    <link rel="stylesheet" href="style2.css">
     <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Helvetica', sans-serif;
-    }
+        /* Retro, clear electronics-inspired header */
+        header {
+            background: rgba(0, 153, 255, 0.5); /* Semi-transparent blue */
+            padding: 30px;
+            text-align: center;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.5); /* Retro glowing bottom border */
+            box-shadow: 0 4px 10px rgba(0, 153, 255, 0.5); /* Soft glow */
+        }
     
-    header {
-       background: linear-gradient(to right, rgba(0, 600, 204, 0.9), rgba(6, 141, 96, 0.55));
-        padding: 30px;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    header::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 0px;
-        background-image: linear-gradient(to right, rgba(0, 102, 204, 0.8), rgba(0, 51, 153, 0.8));
-        z-index: -1;
-    }
-    h1 {
-        margin: 0;
-        color: white;
-        font-size: 36px; /* Adjust font size as needed */
-    }
-    nav ul {
-        list-style: none;
-        margin-top: 20px;
-        margin-inline: 30px;
-        background-color: #3333337a; /* Background color for the tabs */
-        padding: 10px; /* Adjust padding as needed */
-        border-radius: 5px; /* Optional: Add rounded corners to the tabs */
-    }
-   nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        border: 2px solid transparent; /* Add a transparent border initially */
-        padding: 8px 15px; /* Adjust padding as needed */
-        border-radius: 5px; /* Optional: Add rounded corners to the tabs */
-        transition: border-color 0.3s ease; /* Smooth transition for the border color */
-    }
-    nav ul li a:hover {
-        border-color: #b7f5b0; /* Change this color on hover */
-    }
-    .tab-content {
-        display: none;
-        padding: 10px;
-    }
-    .tab-content.active {
-        display: block;
-    }
-    .project-tabs {
-        margin-bottom: 5px;
-    }
-    .project-tabs button {
-        background-color: #415f3a;
-        color: rgb(255, 255, 255);
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    .project-tabs button:hover {
-        background-color: #33ff00a5;
-    }
-    section {
-        padding: 20px 30px;
-    }
-    footer {
-        background-color: #7da678c4;
-        padding: 10px;
-        text-align: center;
-    }
+        h1 {
+            margin: 0;
+            color: #FFF; /* Bright white */
+            font-size: 42px; /* Larger for retro feel */
+            font-family: 'Verdana', sans-serif; /* Clean and retro */
+            text-shadow: 2px 2px 5px rgb(0, 0, 0); /* Subtle glow */
+        }
+    
+        nav ul {
+            list-style: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(50, 50, 50, 0.7); /* Clear background for tabs */
+            border-radius: 10px;
+            text-decoration: none;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+    
+        /* Styles for links */
+        nav ul li a {
+            color: white; /* Set link color to white */
+            text-decoration: none; /* Remove the underline */
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); /* Optional: Subtle shadow for links */
+        }
+    
+        nav ul li a:hover {
+            border-color: rgb(69, 143, 255); /* Bright neon hover border */
+            text-decoration: none; /* Optional: Add underline on hover if desired */
+            
+        }
+    
+        .project-tabs {
+            margin-bottom: 5px;
+            background-color: rgba(69, 143, 255, 0.4); /* Clear blue background */
+            padding: 10px;
+            border-radius: 10px;
+        }
+    
+        .project-tabs button {
+            background-color: rgba(0, 100, 250, 0.4); /* Neon green */
+            color: rgb(255, 255, 255); /* Black text for contrast */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+    
+        .project-tabs button:hover {
+            background-color: rgba(0, 76, 255, 0.75); /* Brighter hover */
+        }
+    
+        .tab-content {
+            display: none;
+            padding: 10px;
+            background-color: rgba(0, 102, 204, 0.1); /* Clear blue content background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Neon glow */
+        }
+    
+        .tab-content.active {
+            display: block;
+        }
+    
+        section {
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.2); /* Clear white background */
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(100, 255, 255, 0.6); /* Soft neon glow */
+        }
+    
+        footer {
+            background-color: rgba(0, 153, 255, 0.1);
+            padding: 10px;
+            text-align: center;
+            border-top: 4px solid rgba(255, 255, 255, 0.3); /* Glowing border */
+        }
+    
+        h2 {
+            color: rgb(191, 244, 255);
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+            text-decoration: none;
+        }
+    
+        h3 {
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+            text-decoration: none;
+        }
+    
+        p {
+            color: #FFF; /* Bright white text */
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+            text-decoration: none;
+        }
     </style>
-</head>
-
     
+</head>
 <body>
 
     <header>
-        <h1>Britney's Website </h1>
+        <h1>Britney's Website</h1>
         <nav>
             <ul>
                 <li><a href="#General">About this Website</a></li>
@@ -108,16 +133,18 @@
         </nav>
     </header>
 
+    <!-- About Section -->
     <section id="General">
         <h2>About this Website</h2>
-        <p> Hey! <p>
+        <p>Hey!</p>
         <p>
             Winter break finally came and I decided I'd use this time to pick up new skills and create things I typically wouldn't find myself doing. 
             I've had the idea of coding my own website for a while now but have pushed it aside for too long. I really wanted a platform where I could showcase 
             my projects in a more personalized manner and I figured this would be the best way to do that. I had fun learning a thing or two in the process. Enjoy!
-        <p>
+        </p>
     </section>
 
+    <!-- About Me Section -->
     <section id="about" style="display: flex; align-items: center;">
         <div style="flex: 1;">
             <h2>About Me</h2>
@@ -138,11 +165,11 @@
             </p>
         </div>
         <div style="flex: 0 0 350px; margin-left: 20px;">
-            <img src="IMG_2497.JPG" alt="About Me Image" style="max-width: 100%; height: auto;">
+            <img src="file:///Users/britneyr./Downloads/IMG_2497.JPG" alt="About Me Image" style="max-width: 100%; height: auto;">
         </div>
     </section>
-    
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
 
@@ -152,12 +179,11 @@
             <button onclick="openTab('project2')">Stanley 1913</button>
             <button onclick="openTab('project3')">Skywalker Legacy</button>
             <button onclick="openTab('project4')">Aquamesh</button>
-            <!-- Add more buttons for additional projects -->
         </div>
 
         <!-- Project Content -->
         <div id="project1" class="tab-content active">
-            <h3> <a href="https://www.rocketproplab.org/ " target="_blank"> ROCKET PROPULSION LABORATORY</a> </h3>
+            <h3>ROCKET PROPULSION LABORATORY</h3>
             <p> I joined Rocket Propulsion in October 2022 as part of their New Member Project (NMP).
                 Engaging in NMP offered a hands-on initiation into rocket design, fostering collaboration and 
                 practical engineering skills. Guided by experienced mentors, I gained proficiency in CAD development and simulation 
@@ -182,65 +208,36 @@
                 <img src="osirislogo-removebg-preview.png" style="width: 100%; max-width: 300px; height: auto;">
         </div>
 
+
+
         <div id="project2" class="tab-content">
-                <h3><a href="https://www.stanley1913.com/" target="_blank">STANLEY 1913</a></h3>
-                <!-- Main product image on the left, additional images and text on the right -->
-                <div class="project-details">
-                    <img src="https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-Classic-Legendary-Bottle-1-5qt-Hammertone-Green_0f44699f-37db-4bae-a6d2-b9936616719e.png?v=1704307510&width=1080" alt="Stanley 1913 Product Image" style="width: 100%; max-width: 300px; height: auto;">
-                    <div class="project-description">
-                        <p>Summer 2023 I was fortunate enough to be part of Stanley 1913's first intern cohort as a Design Engineer. 
-                            This internship surpassed my expectations, offering a remarkably hands-on experience right from the start. 
-                             It provided me with a thorough understanding of all facets of product engineering, including mechanism design, 
-                             material selection, manufacturing methods, assembly, and performance validation. Utilizing SolidWorks, I created detailed 3D printed prototypes, 
-                              optimizing design iterations based on material selection and manufacturing considerations. 
-                             Additionally, I conducted research on metal forming techniques, contributing insights published in Stanley's internal 
-                            documentation to improve manufacturing efficiency.
-                        <p>
-                        <p> Based on my other projects it may be confusing to interpret how Stanley 1913 fits into my career path. 
-                            My internship as a Design Engineer was driven by a desire for diverse industry experience and the 
-                            challenge of immersing myself in a new setting. The engineering skills I acquired 
-                            during this internship are versatile and applicable to any industry. This experience not only enriched my technical abilities but 
-                            also honed my interpersonal skills. I thoroughly enjoyed my time in Seattle and working alongside such a dedicated and passionate team.   
-                        <p>
-                    </div>
-                </div>
-                <!-- Additional images in a row -->
-                <div class="project-images">
-                    <img src="IMG_3290.jpg" alt="Additional Image 1" style="width: 48%; max-width: 400px; height: auto; display: inline-block; margin-right: 2%;">
-                    <img src="IMG_3291.jpg" alt="Additional Image 2" style="width: 48%; max-width: 400px; height: auto; display: inline-block;">
-                </div>
-            </div>
-
-        <!-- Add more tab-content divs for additional projects -->
-
-        <div id="projectDetailsModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeProjectDetailsModal()">&times;</span>
-                <h2 id="projectTitle"></h2>
-                <p id="projectDescription"></p>
-            </div>
+            <h3>Stanley 1913</h3>
+            <p>Worked on historical mechanical analysis for restoring vintage devices.</p>
         </div>
-
-    <div id="project3" class="tab-content active">
-            <h3> work in progress<h3>
-    </div>
-                
-    <div id="project4" class="tab-content active">
-            <h3> work in progress<h3>
-    </div>
+        <div id="project3" class="tab-content">
+            <h3>Skywalker Legacy</h3>
+            <p>A project exploring creative ways to preserve and promote cultural heritage through immersive experiences.</p>
+        </div>
+        <div id="project4" class="tab-content">
+            <h3>Aquamesh</h3>
+            <p>Developed an innovative solution for water filtration systems using advanced mesh technology.</p>
+        </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <h3>Software:</h3>
-        <p> Excel, OpenRocket, SOLIDWORKS, Python, MATLAB, Fusion 360, AutoCAD, Microsoft
-            Powerpoint, Microsoft Teams, Outlook, Microsoft Word, Blender, Zoom
+        <p> Excel, OpenRocket, SOLIDWORKS, Python, MATLAB, Fusion 360, AutoCAD, Microsoft Powerpoint,
+            Microsoft Teams, Outlook, Microsoft Word, Blender, Zoom, NX, Ansys WorkBench, Ansys Mechanical
         </p>
         <h3>Technical:</h3>
-        <p>Engineering Drawings, 3D Printing (SLA & FDM), Lathe Machining, Laser Cutting, Drill press, Power Tools, Soldering
+        <p>Engineering Drawings, 3D Printing (SLA & FDM), Lathe Machining, Mill Machining, Laser Cutting,
+             Drill Press, Power Tools, Soldering, CNC, Tool Path Generation, Structural FEA, GD&T
         </p>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me </h2>
         <h3>Email:</h3>
@@ -251,26 +248,16 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 BritneyAileenRosas.</p>
+        <p>&copy; 2024 BritneyAileenRosas </p>
     </footer>
 
-    <script src="script.js"></script>
-
     <script>
+        // JavaScript for handling tab switching
         function openTab(tabId) {
-            // Hide all tab content
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-
-            // Show the selected tab content
-            var selectedTab = document.getElementById(tabId);
-            if (selectedTab) {
-                selectedTab.classList.add('active');
-            }
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
         }
     </script>
 </body>
 </html>
-
